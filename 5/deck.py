@@ -1,22 +1,31 @@
 import random
 
-cardNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"]
+cardNumbers = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"]
 cardSuits = ["Spades", "Hearts", "Clubs", "Diamonds"]
 
 class Deck:
   def __init__(self):
+    self.deck = []
+    self.discards = []
     self.shuffle()
+  @staticmethod
+  def get_numbers():
+    return cardNumbers
+  @staticmethod
+  def get_suits():
+    return cardSuits
   def shuffle(self):
     deck = []
     for number in cardNumbers:
       for suit in cardSuits:
-        deck.append({number: str(number), suit: str(suit)})
-    self.deck = random.shuffle(deck)
+        deck.append({"number": number, "suit": suit})
+    random.shuffle(deck)
+    self.deck = deck
     self.discards = []
   def draw(self):
     try:
-      card = deck.pop()
-      discards.append(card)
+      card = self.deck.pop()
+      self.discards.append(card)
       return card
     except IndexError:
       return None

@@ -116,24 +116,21 @@ print("Writing your own name doen't makes you a coder")
   <summary>Hint #5</summary>
   
   ```python
-  print('\n')
-  print('Now its time to guess. You have guessed',len(store_letter),'letters correctly.')
-  print('These letters are: ', store_letter)
-
-  word_guess = input('Guess the whole word: ')
-  while word_guess:
-    if word_guess.lower() == correct:
-      print('Congrats!')
-      break
-
-    elif word_guess.lower() != correct:
-      print('Unlucky! The answer was,', word)
-      break
-
-  print('\n')
-  input('Press Enter to leave the program ')
+  import deck, sys
+  from miniutils import *
 
   ```
   
-  Let the user guess the whole word then exit
+  Import deck and import miniutils from Miniutils.py
+</details>
+<details>
+  <summary>Hint #6</summary>
+  
+  ```python
+  import deck, sys
+  from miniutils import *
+
+  ```
+  
+  Import deck and import miniutils from Miniutils.py
 </details>

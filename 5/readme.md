@@ -1,10 +1,12 @@
-## Task 3: Anagram Game
-> - Create an array of different words
-> - Randomly select a word from this list 
-> - Randomly mix up the letters 
-> - Display the word to the user
-> - Start a counter For each incorrect guess, increase the number of guesses by one
-> - When the guess is correct, display the total number of guesses that it took
+## Task 5: Play your cards right
+> - Create an array of playing cards that are random and can be used whenever you need in the rest of the program
+> - Display the first card
+> - Ask the user whether they think the next card is smaller or larger than the card displayed 
+> - If they are correct they are then shown the next card in the list, up to a maximum of five cards
+> - If they card value is the same as the previous, the game is also over
+> - If they get to the end of the five cards, they have won
+> - If they are incorrect the game is over
+> - Ace is low, The suit order is Jack, Queen, King with King being this highest
 
 [Run the code](https://Anagram-Game.minion3665.repl.run)
 #### Hints:

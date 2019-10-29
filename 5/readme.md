@@ -17,29 +17,29 @@
   import random
   ```
   
-  Try importing the random module to allow chosing a random word
+  Try importing the random module to allow chosing a random card
 </details>
 <details>
   <summary>Hint #2</summary>
   
   ```python
-  WORD = ('apple', 'dell', 'amazon', 'microsoft', 'google')
-  word = random.choice(WORD)
-  correct = word
-  clue = word[0] + word[(len(word)-1):(len(word))]
-  letters = list(word)
-  letter_guess = ''
-  word_guess = ''
-  store_letter = ''
-  count = 0
-  limit = 5
+cardNumbers = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"]
+cardSuits = ["Spades", "Hearts", "Clubs", "Diamonds"]
+
+class Deck:
+  def __init__(self):
+    self.deck = []
+    self.discards = []
+    self.shuffle()
+  @staticmethod
+  def get_numbers():
+
 
   ```
   
-  Initialize starting variables
-  - Pick a random word from a list of possible words
-  - Allow a clue
-  - Set the guess limit
+  Initialize starting arrays
+  - Create variavles that shuffle the cards that we can use whenever needed.
+  - use the ```python self.shuffle()``` variable
 </details>
 <details>
   <summary>Hint #3</summary>

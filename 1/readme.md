@@ -5,7 +5,7 @@
 > - Display the new word to the user<br/>
 
 <a href="https://anagrammakerpy.vilagamer999.repl.run/" target="blank">Run the code</a>
-[Run the code](https://anagrammakerpy.vilagamer999.repl.run/)
+
 #### Hints:
 <details>
   <summary>Hint #1</summary>

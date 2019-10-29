@@ -9,7 +9,7 @@
 > - Display the number of seconds
 > - Stop and ask the user what the maximum number of letters they have got
 
-[Run the code](https://Anagram-Game.minion3665.repl.run)
+[Run the code](https://Countdown.minion3665.repl.run)
 #### Hints:
 <details>
   <summary>Hint #1</summary>

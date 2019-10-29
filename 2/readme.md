@@ -3,7 +3,7 @@
 > - Create a loop that repositions each letter into a new position in the word 
 > - Decide on which of the different sorting methods that you know, that might help you do this
 
-[Run the code](https://repl.it/@minion3665/Anagram-Solver)
+[Run the code](https://Anagram-Solver.minion3665.repl.run)
 #### Hints:
 <details>
   <summary>Hint #1</summary>

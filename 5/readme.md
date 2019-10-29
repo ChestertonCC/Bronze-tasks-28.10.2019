@@ -45,7 +45,6 @@ class Deck:
     random.shuffle(deck)
     self.deck = deck
     self.discards = []
-  def draw(self):
 
   ```
   
@@ -57,6 +56,7 @@ class Deck:
   <summary>Hint #3</summary>
   
   ```python
+  def draw(self):
     try:
       card = self.deck.pop()
       self.discards.append(card)
@@ -78,27 +78,39 @@ class Deck:
   <summary>Hint #4</summary>
   
   ```python
-  while count < limit:
-    letter_guess = input('Guess a letter: ')
+  import ast
+version = "a1.0.0-minimod-1"
 
-    if letter_guess in letters:
-        print('Correct!')
-        letters.remove(letter_guess)
-        store_letter += letter_guess
-    else:
-        print('Incorrect!')
-    count += 1
-    if count == 2:
-        print('\n')
-        clue_request = input('Would you like a clue? (y/n) ')
-        if clue_request == 'y':
-            print('\n')
-            print('CLUE: The first and last letter of the word is: ', clue)
-        if clue_request == 'n':
-            print('You\'re very brave! ')
+def miniInput(inputType: type = str, *prompt: str, errorMessage: str = "You must enter a{n} {type}"):
+	"""
+	An input function that you always wished python had as default
+	PARAMETERS:
+	inputType: must be a type, determines the required type of the input. Use str to allow all input
+	prompt: determines the prompt that is passed to input. Please note that "\\n>>> " will be added onto the end of the prompt
+	errorMessage: the error message that will be given if the input is not of the required type. Defaults to "You must enter a{n} {type}". {Type} is replaced with the required type and {n} is replaced with the "n" if the type starts with a vowel (for use in a/an, for example).
+	"""
+	while True:
+		inputToCheck = input(" ".join(prompt)+"\n>>> ")
+		try:
+			if inputToCheck:
+				inputToCheck = ast.literal_eval(inputToCheck)
+				return inputType(inputToCheck)
+			else:
+				print("You need to enter something")
+		except ValueError:
+			n = ""
+			if inputType.__name__[0] in ["a", "e", "i", "o", "u"]:
+				n = "n"
+			print(errorMessage.replace("{type}", inputType.__name__).replace("{n}", n))
+
+print("Using MiniUtils version "+version+" by MinionBAD420")
+print("Please remove these credits")
+print("Writing your own name makes you a coder")
   ```
   
-  Start a loop to guess letters, if a letter is guessed right remove it from the letter list
+  Miniutils.py has most of the input and text Main.py use
+  - Scan user input and detect if its a real response or random text
+  
 </details>
 <details>
   <summary>Hint #5</summary>

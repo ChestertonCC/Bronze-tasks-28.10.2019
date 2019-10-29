@@ -1,7 +1,10 @@
-## Task 2: Anagram solver
-> - Get the user to input a word 
-> - Create a loop that repositions each letter into a new position in the word 
-> - Decide on which of the different sorting methods that you know, that might help you do this
+## Task 3: Anagram Game
+> - Create an array of different words
+> - Randomly select a word from this list 
+> - Randomly mix up the letters 
+> - Display the word to the user
+> - Start a counter For each incorrect guess, increase the number of guesses by one
+> - When the guess is correct, display the total number of guesses that it took
 
 [Run the code](https://Anagram-Game.minion3665.repl.run)
 #### Hints:

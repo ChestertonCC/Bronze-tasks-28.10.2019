@@ -4,6 +4,7 @@ WORD = ('apple', 'dell', 'amazon', 'microsoft', 'google')
 word = random.choice(WORD)
 correct = word
 clue = word[0] + word[(len(word)-1):(len(word))]
+letters = list(word)
 letter_guess = ''
 word_guess = ''
 store_letter = ''
@@ -18,15 +19,13 @@ print('\n')
 while count < limit:
     letter_guess = input('Guess a letter: ')
 
-    if letter_guess in word:
+    if letter_guess in letters:
         print('Correct!')
+        letters.remove(letter_guess)
         store_letter += letter_guess
-        count += 1
-
-    if letter_guess not in word:
+    else:
         print('Incorrect!')
-        count += 1
-
+    count += 1
     if count == 2:
         print('\n')
         clue_request = input('Would you like a clue? (y/n) ')

@@ -4,7 +4,7 @@
 > - Each letter should then be randomly positioned into a random position in a new word<br/>
 > - Display the new word to the user<br/>
 
-<a href="https://anagrammakerpy.vilagamer999.repl.run/" target="blank">Run the code</a>
+<a href="https://anagrammakerpy.vilagamer999.repl.run/" target="_blank">Run the code</a>
 
 #### Hints:
 <details>

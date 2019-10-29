@@ -33,7 +33,19 @@ class Deck:
     self.shuffle()
   @staticmethod
   def get_numbers():
-
+    return cardNumbers
+  @staticmethod
+  def get_suits():
+    return cardSuits
+  def shuffle(self):
+    deck = []
+    for number in cardNumbers:
+      for suit in cardSuits:
+        deck.append({"number": number, "suit": suit})
+    random.shuffle(deck)
+    self.deck = deck
+    self.discards = []
+  def draw(self):
 
   ```
   
@@ -45,13 +57,22 @@ class Deck:
   <summary>Hint #3</summary>
   
   ```python
-  print('Welcome to "Amazing Anagram Game!"')
-  print('You have 5 attempts at guessing letters in a word')
-  print('Let\'s begin!')
-  print('\n')
+    try:
+      card = self.deck.pop()
+      self.discards.append(card)
+      return card
+    except IndexError:
+      return None
+  def get(self, index):
+    try:
+      return self.deck[-(index+1)]
+    except IndexError:
+      return None
+  def get_discards(self):
+    return self.discards
   ```
-  
-  Welcome the user to the game
+  Get deck of cards and shuffle them when needed.
+  - End of deck.py file
 </details>
 <details>
   <summary>Hint #4</summary>

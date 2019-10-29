@@ -103,9 +103,9 @@ def miniInput(inputType: type = str, *prompt: str, errorMessage: str = "You must
 				n = "n"
 			print(errorMessage.replace("{type}", inputType.__name__).replace("{n}", n))
 
-print("Using MiniUtils version "+version+" by MinionBAD420")
-print("Please remove these credits")
-print("Writing your own name makes you a coder")
+print("Using MiniUtils version "+version+" by Minion3665")
+print("Please don't remove these credits")
+print("Writing your own name doen't makes you a coder")
   ```
   
   Miniutils.py has most of the input and text Main.py use
